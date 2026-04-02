@@ -202,3 +202,35 @@
     z-index: 20;
 }
 
+
+
+
+/* لمسة جمالية: خط نحيف جداً تحت الهيدر ليفصله بنعومة *//* لمسة جمالية: خط نحيف جداً تحت الهيدر ليفصله بنعومة */
+
+/* لمسة جمالية: خط نحيف جداً تحت الهيدر ليفصله بنعومة */
+.main-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+/* تنسيق أيقونات الهيدر (مثل التنبيهات أو البروفايل) */
+.header-icons i {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+/* إذا كان هناك عنوان داخل الهيدر */
+.header-title h1, .header-title h2 {
+    color: white !important;
+    font-size: 22px;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2); /* لمسة عمق للنص */
+}
