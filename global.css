@@ -104,8 +104,15 @@ html, body {
 
 /* --- إصلاح ظهور المحتوى خلف الشريط --- */
 .screen {
-    padding-bottom: 150px !important; /* مساحة كافية جداً لظهور التغريدات فوق الشريط */
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* 150px تضمن أن التغريدات وزر تسجيل الدخول ستظهر فوق المنيو عند السحب */
+    padding-bottom: calc(140px + env(safe-area-inset-bottom)) !important;
+background: transparent !important;
 }
+
 /* --- 5. الهيدر --- */
 .main-header, .home-header {
     background: transparent !important;
